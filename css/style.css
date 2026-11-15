@@ -1,0 +1,1145 @@
+/* Paleta clara e medidas comuns inspiradas na referência. */
+:root {
+    --fundo: #f8f7f2;
+    --texto: #304d43;
+    --texto-suave: #707b73;
+    --verde: #e6ecdf;
+    --lilas: #eee9f2;
+    --largura: 1120px;
+}
+
+/* Base para manter os elementos alinhados e legíveis. */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Cabeçalho com marca, navegação e acesso rápido ao contato. */
+.cabecalho {
+    width: min(var(--largura), calc(100% - 64px));
+    min-height: 74px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.marca {
+    display: inline-flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.marca__nome {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.marca__legenda {
+    margin-top: 2px;
+    color: var(--texto-suave);
+    font-size: 6px;
+    letter-spacing: 0.12em;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navegacao__link {
+    padding: 7px 12px;
+    border-radius: 999px;
+    color: var(--texto-suave);
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.navegacao__link:hover,
+.navegacao__link--ativo {
+    background: var(--verde);
+    color: var(--texto);
+}
+
+/* Botões de navegação e chamada à ação. */
+.botao {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 16px;
+    border-radius: 999px;
+    background: var(--texto);
+    color: #fff;
+    font-size: 11px;
+    text-decoration: none;
+    transition: background-color 160ms ease;
+}
+
+.botao:hover {
+    background: #203b32;
+}
+
+.botao--discreto {
+    padding: 8px 12px;
+    border: 1px solid #e8e6de;
+    background: transparent;
+    color: var(--texto);
+    font-size: 9px;
+}
+
+.botao--discreto:hover {
+    background: #eeede7;
+}
+
+/* Abertura da página com conteúdo à esquerda e espaço de imagem à direita. */
+.hero {
+    width: min(var(--largura), calc(100% - 64px));
+    min-height: 350px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 64px;
+    padding: 36px 0 48px;
+}
+
+.hero__texto {
+    max-width: 470px;
+}
+
+.sobretitulo {
+    margin-bottom: 12px;
+    color: var(--texto-suave);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.hero h1 {
+    max-width: 440px;
+    margin-bottom: 14px;
+    font-size: clamp(36px, 4vw, 52px);
+    letter-spacing: -0.045em;
+}
+
+.texto-introdutorio {
+    max-width: 410px;
+    margin-bottom: 20px;
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.hero__imagem {
+    min-height: 260px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.hero__imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Introdução em faixa branca, como na referência. */
+.introducao {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 72px;
+    padding: 40px max(32px, calc((100% - var(--largura)) / 2));
+    background: #fff;
+}
+
+.introducao h2,
+.secao__cabecalho h2,
+.pausa h2 {
+    max-width: 460px;
+    margin-bottom: 0;
+    font-size: clamp(22px, 2.4vw, 29px);
+    letter-spacing: -0.025em;
+}
+
+.introducao__conteudo {
+    max-width: 540px;
+    color: var(--texto-suave);
+    font-size: 11px;
+}
+
+.introducao__conteudo p {
+    margin-bottom: 8px;
+}
+
+.introducao__conteudo .texto-destaque {
+    margin-bottom: 0;
+    color: var(--texto);
+    font-weight: 700;
+}
+
+/* Grade de temas em dois cartões coloridos. */
+.temas {
+    width: min(var(--largura), calc(100% - 64px));
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.secao__cabecalho {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.dica {
+    margin: 0 0 4px;
+    color: var(--texto-suave);
+    font-size: 9px;
+}
+
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.cartao {
+    position: relative;
+    min-height: 185px;
+    padding: 20px 22px;
+    border-radius: 17px;
+}
+
+.cartao--verde {
+    background: var(--verde);
+}
+
+.cartao--lilas {
+    background: var(--lilas);
+}
+
+.cartao__numero {
+    display: block;
+    margin-bottom: 22px;
+    font-size: 9px;
+}
+
+.cartao__icone {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 15px;
+}
+
+.cartao h3 {
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+
+.cartao p {
+    max-width: 380px;
+    margin-bottom: 11px;
+    color: var(--texto-suave);
+    font-size: 10px;
+}
+
+.cartao a {
+    font-size: 9px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.cartao a:hover {
+    text-decoration: underline;
+}
+
+/* Faixa de autocuidado em fundo verde acinzentado. */
+.pausa {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 72px;
+    padding: 42px max(32px, calc((100% - var(--largura)) / 2));
+    background: #edf0e9;
+}
+
+.pausa__introducao > p:last-child {
+    max-width: 360px;
+    margin: 13px 0 0;
+    color: var(--texto-suave);
+    font-size: 10px;
+}
+
+.passos {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.passos li {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 10px;
+}
+
+.passos__numero {
+    padding-top: 2px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.passos h3 {
+    margin-bottom: 2px;
+    font-size: 11px;
+}
+
+.passos p {
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 9px;
+}
+
+/* Informações de apoio e contato telefônico. */
+.apoio {
+    width: min(var(--largura), calc(100% - 64px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    padding: 38px 0;
+}
+
+.apoio__texto {
+    max-width: 580px;
+}
+
+.apoio h2 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.apoio p {
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 10px;
+}
+
+.apoio__contato {
+    padding-left: 28px;
+    border-left: 1px solid #e5e5dd;
+}
+
+.apoio__contato h3 {
+    margin: 0 0 6px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* Rodapé leve, alinhado ao conteúdo principal. */
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 22px max(32px, calc((100% - var(--largura)) / 2));
+    background: #edf0e9;
+}
+
+.rodape p {
+    margin: 5px 0 0;
+    color: var(--texto-suave);
+    font-size: 8px;
+}
+
+.rodape__aviso {
+    text-align: right;
+}
+
+/* Estilos específicos da página de amizade. */
+.amizade-page {
+    --amizade-verde: #e5ebdf;
+    --amizade-lilas: #eee8f2;
+}
+
+.amizade-page .cabecalho,
+.habitos-page .cabecalho {
+    min-height: 64px;
+}
+
+.amizade-page .navegacao__link,
+.habitos-page .navegacao__link {
+    font-size: 10px;
+}
+
+.amizade-hero,
+.habitos-hero {
+    width: min(var(--largura), calc(100% - 64px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    align-items: center;
+    gap: 64px;
+    padding: 8px 0 26px;
+}
+
+.amizade-hero {
+    min-height: 250px;
+}
+
+.habitos-hero {
+    min-height: 238px;
+}
+
+.amizade-hero__conteudo,
+.habitos-hero__conteudo {
+    max-width: 470px;
+}
+
+.amizade__caminho,
+.habitos__caminho {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    color: var(--texto-suave);
+    font-size: 9px;
+}
+
+.amizade__caminho a,
+.habitos__caminho a {
+    text-decoration: none;
+}
+
+.amizade__caminho a:hover,
+.habitos__caminho a:hover {
+    text-decoration: underline;
+}
+
+.amizade-hero .sobretitulo,
+.habitos-hero .sobretitulo {
+    margin-bottom: 10px;
+}
+
+.amizade-hero h1,
+.habitos-hero h1 {
+    margin-bottom: 12px;
+    font-size: clamp(32px, 4vw, 46px);
+    letter-spacing: -0.035em;
+}
+
+.amizade-hero__descricao,
+.habitos-hero__descricao {
+    max-width: 430px;
+    margin-bottom: 12px;
+    color: var(--texto-suave);
+    font-size: 10px;
+}
+
+.amizade__selo,
+.habitos__selo {
+    display: inline-block;
+    margin: 0;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 8px;
+}
+
+.amizade__selo {
+    background: var(--amizade-verde);
+}
+
+.habitos__selo {
+    background: var(--lilas);
+}
+
+.amizade-hero__imagem,
+.habitos-hero__imagem {
+    min-height: 202px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.amizade-hero__imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.habitos-hero__imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Conteúdo da página de amizade. */
+.amizade-pilares {
+    padding: 28px max(32px, calc((100% - var(--largura)) / 2));
+    background: #fff;
+}
+
+.amizade-pilares h2,
+.amizade-atitudes h2,
+.amizade-continuar h2 {
+    margin-bottom: 22px;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+}
+
+.amizade-pilares__grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 34px;
+}
+
+.amizade-pilares__grade article > span,
+.amizade-atitude > span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.amizade-pilares__grade h3 {
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.amizade-pilares__grade p {
+    max-width: 250px;
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 9px;
+}
+
+.amizade-atitudes {
+    padding: 28px max(32px, calc((100% - var(--largura)) / 2)) 30px;
+}
+
+.amizade-atitudes .sobretitulo {
+    margin-bottom: 12px;
+}
+
+.amizade-atitudes h2 {
+    margin-bottom: 14px;
+}
+
+.amizade-atitudes__grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.amizade-atitude {
+    min-height: 84px;
+    padding: 12px;
+    border-radius: 11px;
+    background: #f0efe8;
+}
+
+.amizade-atitude--verde {
+    background: var(--amizade-verde);
+}
+
+.amizade-atitude > span {
+    margin-bottom: 5px;
+    font-size: 7px;
+}
+
+.amizade-atitude h3 {
+    margin-bottom: 5px;
+    font-size: 11px;
+}
+
+.amizade-atitude p {
+    max-width: 430px;
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 8px;
+}
+
+.amizade-conversa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 64px;
+    padding: 28px max(32px, calc((100% - var(--largura)) / 2));
+    background: var(--amizade-lilas);
+}
+
+.amizade-conversa .sobretitulo {
+    margin-bottom: 10px;
+}
+
+.amizade-conversa h2 {
+    max-width: 390px;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.amizade-conversa > div > p:last-child {
+    max-width: 390px;
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 9px;
+}
+
+.amizade-conversa blockquote {
+    margin: 0;
+}
+
+.amizade-conversa blockquote > p {
+    max-width: 380px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.amizade-conversa blockquote footer {
+    max-width: 430px;
+    color: var(--texto-suave);
+    font-size: 8px;
+}
+
+.amizade-continuar,
+.habitos-continuar {
+    width: min(var(--largura), calc(100% - 64px));
+    min-height: 74px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 0;
+}
+
+.amizade-continuar .sobretitulo,
+.habitos-continuar .sobretitulo {
+    margin-bottom: 5px;
+}
+
+.amizade-continuar h2,
+.habitos-continuar h2 {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.amizade-continuar .botao,
+.habitos-continuar .botao {
+    flex-shrink: 0;
+    padding: 9px 14px;
+    font-size: 8px;
+}
+
+.amizade-rodape,
+.habitos-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 14px max(32px, calc((100% - var(--largura)) / 2));
+    background: #edf0e9;
+}
+
+.amizade-rodape {
+    min-height: 42px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.amizade-rodape .marca__nome,
+.habitos-rodape .marca__nome {
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.amizade-rodape p,
+.habitos-rodape p {
+    margin: 4px 0 0;
+    color: var(--texto-suave);
+    font-size: 8px;
+}
+
+/* Conteúdo da página de hábitos saudáveis. */
+.habitos-page {
+    --habitos-lilas: #eee8f2;
+    --habitos-areia: #f1efe7;
+    --habitos-verde: #e9eee5;
+}
+
+.habitos-cuidados {
+    padding: 28px max(32px, calc((100% - var(--largura)) / 2));
+    background: #fff;
+}
+
+.habitos-cuidados > .sobretitulo,
+.habitos-rotina > .sobretitulo {
+    margin-bottom: 12px;
+}
+
+.habitos-cuidados h2,
+.habitos-rotina h2 {
+    margin-bottom: 16px;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+}
+
+.habitos-cuidados__grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.habito-cartao {
+    min-height: 94px;
+    padding: 12px;
+    border-radius: 11px;
+}
+
+.habito-cartao--lilas {
+    background: var(--habitos-lilas);
+}
+
+.habito-cartao--areia {
+    background: var(--habitos-areia);
+}
+
+.habito-cartao--verde {
+    background: var(--habitos-verde);
+}
+
+.habito-cartao > span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 7px;
+    font-weight: 700;
+}
+
+.habito-cartao h3 {
+    margin-bottom: 5px;
+    font-size: 11px;
+}
+
+.habito-cartao p {
+    max-width: 260px;
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 8px;
+}
+
+.habitos-rotina {
+    padding: 28px max(32px, calc((100% - var(--largura)) / 2));
+}
+
+.habitos-rotina > .sobretitulo {
+    margin-bottom: 10px;
+}
+
+.habitos-rotina h2 {
+    margin-bottom: 18px;
+}
+
+.habitos-rotina__grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.habitos-rotina__grade article > .sobretitulo {
+    margin-bottom: 7px;
+    font-size: 7px;
+}
+
+.habitos-rotina__grade h3 {
+    margin-bottom: 6px;
+    font-size: 11px;
+}
+
+.habitos-rotina__grade article > p:last-child {
+    max-width: 270px;
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 8px;
+}
+
+.habitos-rotina__nota {
+    margin: 14px 0 0;
+    color: var(--texto-suave);
+    font-size: 8px;
+}
+
+.habitos-desafio {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 64px;
+    padding: 28px max(32px, calc((100% - var(--largura)) / 2));
+    background: #e5ecdf;
+}
+
+.habitos-desafio__introducao > .sobretitulo {
+    margin-bottom: 10px;
+}
+
+.habitos-desafio h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+}
+
+.habitos-desafio__introducao > p:last-child {
+    max-width: 400px;
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 9px;
+}
+
+.habitos-desafio__passos {
+    display: grid;
+    align-content: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.habitos-desafio__passos li {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 8px;
+}
+
+.habitos-desafio__passos li > span {
+    padding-top: 1px;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.habitos-desafio__passos h3 {
+    margin-bottom: 2px;
+    font-size: 10px;
+}
+
+.habitos-desafio__passos p {
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 8px;
+}
+
+.habitos-rodape__aviso {
+    text-align: right;
+}
+
+/* Layout móvel para telefones e telas com menos de 700 pixels de largura. */
+@media (max-width: 699px) {
+    .cabecalho,
+    .amizade-page .cabecalho,
+    .habitos-page .cabecalho {
+        width: calc(100% - 36px);
+        min-height: 68px;
+        flex-wrap: wrap;
+        column-gap: 8px;
+        row-gap: 12px;
+        padding: 12px 0;
+    }
+
+    .cabecalho .navegacao {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 0;
+        overflow-x: auto;
+    }
+
+    .navegacao__link {
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+
+    .botao--discreto {
+        font-size: 8px;
+    }
+
+    .hero,
+    .amizade-hero,
+    .habitos-hero {
+        width: calc(100% - 36px);
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    .hero__imagem {
+        min-height: auto;
+        border-radius: 24px;
+    }
+
+    .hero__imagem img {
+        width: 100%;
+        height: auto;
+    }
+
+    .amizade__caminho,
+    .habitos__caminho {
+        margin-bottom: 22px;
+    }
+
+    .amizade-hero__imagem,
+    .habitos-hero__imagem {
+        min-height: 0;
+        border-radius: 24px;
+    }
+
+    .amizade-hero__imagem img,
+    .habitos-hero__imagem img {
+        width: 100%;
+        height: auto;
+    }
+
+    .introducao,
+    .pausa,
+    .amizade-conversa,
+    .habitos-desafio {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 30px 18px;
+    }
+
+    .temas,
+    .apoio,
+    .amizade-continuar,
+    .habitos-continuar {
+        width: calc(100% - 36px);
+    }
+
+    .temas,
+    .amizade-pilares,
+    .amizade-atitudes,
+    .habitos-cuidados,
+    .habitos-rotina {
+        padding: 30px 18px;
+    }
+
+    .secao__cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cartoes,
+    .amizade-pilares__grade,
+    .amizade-atitudes__grade,
+    .habitos-cuidados__grade,
+    .habitos-rotina__grade {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .amizade-pilares__grade {
+        gap: 18px;
+    }
+
+    .amizade-atitude,
+    .habito-cartao {
+        min-height: 80px;
+    }
+
+    .amizade-conversa blockquote > p {
+        font-size: 13px;
+    }
+
+    .habito-cartao p,
+    .habitos-rotina__grade article > p:last-child {
+        max-width: none;
+    }
+
+    .habitos-rotina__grade {
+        gap: 18px;
+    }
+
+    .apoio {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    .apoio__contato {
+        padding: 0;
+        border: 0;
+    }
+
+    .amizade-continuar,
+    .habitos-continuar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+        padding: 20px 0;
+    }
+
+    .rodape,
+    .amizade-rodape,
+    .habitos-rodape {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 18px;
+    }
+
+    .rodape__aviso,
+    .habitos-rodape__aviso {
+        text-align: left;
+    }
+}
+
+/* Em tablets, reduz os espaços sem perder o alinhamento das colunas. */
+@media (min-width: 700px) and (max-width: 760px) {
+    .cabecalho,
+    .hero,
+    .temas,
+    .apoio {
+        width: min(calc(100% - 40px), var(--largura));
+    }
+
+    .cabecalho {
+        min-height: 68px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .navegacao {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 0.85fr;
+        gap: 28px;
+        padding: 42px 0;
+    }
+
+    .hero__imagem {
+        min-height: 220px;
+        border-radius: 64px;
+    }
+
+    .introducao,
+    .pausa {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        padding-right: 28px;
+        padding-left: 28px;
+    }
+}
+
+/* Em celulares, empilha as seções e deixa os cartões em coluna. */
+@media (max-width: 560px) {
+    .cabecalho,
+    .hero,
+    .temas,
+    .apoio {
+        width: calc(100% - 36px);
+    }
+
+    .cabecalho {
+        column-gap: 8px;
+    }
+
+    .botao--discreto {
+        font-size: 8px;
+    }
+
+    .navegacao {
+        justify-content: flex-start;
+        gap: 0;
+        overflow-x: auto;
+    }
+
+    .navegacao__link {
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 34px 0;
+    }
+
+    .hero__imagem {
+        min-height: 205px;
+    }
+
+    .introducao,
+    .pausa {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 34px 18px;
+    }
+
+    .temas {
+        padding: 38px 0;
+    }
+
+    .secao__cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .apoio {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 32px 0;
+    }
+
+    .apoio__contato {
+        padding: 0;
+        border: 0;
+    }
+
+    .rodape {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px 18px;
+    }
+
+    .rodape__aviso {
+        text-align: left;
+    }
+}

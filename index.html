@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrelaços | Bem-estar na escola</title>
+    <link rel="icon" href="img/icon.png" type="image/jpeg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho com a marca e os links para as seções da página. -->
+    <header class="cabecalho">
+        <a class="marca" href="#inicio" aria-label="Entrelaços - início">
+            <span class="marca__nome">entrelaços</span>
+            <span class="marca__legenda">BEM-ESTAR NA ESCOLA</span>
+        </a>
+
+        <nav class="navegacao" aria-label="Navegação principal">
+            <a class="navegacao__link navegacao__link--ativo" href="#inicio">Início</a>
+            <a class="navegacao__link" href="pags/Amizade.html">Amizade</a>
+            <a class="navegacao__link" href="pags/habitos-saudaveis.html">Hábitos saudáveis</a>
+        </nav>
+
+        <a class="botao botao--discreto" href="#ajuda">Precisa conversar?</a>
+    </header>
+
+    <main>
+        <!-- Apresentação principal: chamada à ação à esquerda e espaço da imagem à direita. -->
+        <section class="hero" id="inicio">
+            <div class="hero__texto">
+                <p class="sobretitulo">UM ESPAÇO PARA SE SENTIR E CONVERSAR</p>
+                <h1>Cuidar da mente é cuidar de você.</h1>
+                <p class="texto-introdutorio">
+                    Você não precisa dar conta de tudo o tempo todo. Vamos descobrir juntos
+                    como as amizades e os pequenos hábitos podem fazer parte do seu bem-estar.
+                </p>
+                <a class="botao" href="#temas">Explore os caminhos <span aria-hidden="true">→</span></a>
+            </div>
+
+            <!-- Ilustração principal compartilhada com a página de amizade. -->
+            <div class="hero__imagem">
+                <img src="img/Imagem01.png" alt="Duas pessoas conversam sentadas em um banco">
+            </div>
+        </section>
+
+        <!-- Introdução breve sobre saúde mental. -->
+        <section class="introducao" aria-labelledby="titulo-introducao">
+            <div>
+                <p class="sobretitulo">ANTES DE TUDO</p>
+                <h2 id="titulo-introducao">Sua saúde mental importa. Todos os dias.</h2>
+            </div>
+            <div class="introducao__conteudo">
+                <p>
+                    Saúde mental tem a ver com a forma como sentimos, pensamos e nos
+                    relacionamos. Não é estar feliz o tempo inteiro: é também reconhecer
+                    emoções e encontrar apoio.
+                </p>
+                <p class="texto-destaque">Sentir faz parte. Pedir ajuda também.</p>
+            </div>
+        </section>
+
+        <!-- Temas apresentados em cartões, com links para suas respectivas seções. -->
+        <section class="temas" id="temas" aria-labelledby="titulo-temas">
+            <div class="secao__cabecalho">
+                <div>
+                    <p class="sobretitulo">APRENDA E LEVE PARA A VIDA</p>
+                    <h2 id="titulo-temas">O cuidado começa nas pequenas coisas.</h2>
+                </div>
+                <p class="dica">Escolha um tema para explorar <span aria-hidden="true">↗</span></p>
+            </div>
+
+            <div class="cartoes">
+                <article class="cartao cartao--verde" id="amizade">
+                    <span class="cartao__numero">01</span>
+                    <span class="cartao__icone" aria-hidden="true">↗</span>
+                    <h3>Amizade</h3>
+                    <p>Laços que acolhem, escuta de verdade e a liberdade de ser quem você é.</p>
+                    <a href="pags/Amizade.html">Descobrir a força das conexões <span aria-hidden="true">→</span></a>
+                </article>
+
+                <article class="cartao cartao--lilas" id="habitos">
+                    <span class="cartao__numero">02</span>
+                    <span class="cartao__icone" aria-hidden="true">↗</span>
+                    <h3>Hábitos saudáveis</h3>
+                    <p>Mais descanso, movimento e equilíbrio. Um passo possível de cada vez.</p>
+                    <a href="pags/habitos-saudaveis.html">Encontrar o seu ritmo <span aria-hidden="true">→</span></a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pequena pausa com sugestões práticas de autocuidado. -->
+        <section class="pausa" id="pausa" aria-labelledby="titulo-pausa">
+            <div class="pausa__introducao">
+                <p class="sobretitulo">QUE TAL UMA PAUSA?</p>
+                <h2 id="titulo-pausa">Como você está se sentindo hoje?</h2>
+                <p>Não existe resposta certa. Dê um nome ao que sente, sem se julgar.</p>
+            </div>
+
+            <ol class="passos">
+                <li>
+                    <span class="passos__numero">01</span>
+                    <div>
+                        <h3>Pare por um instante</h3>
+                        <p>Afaste-se das telas e perceba o seu corpo.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="passos__numero">02</span>
+                    <div>
+                        <h3>Respire no seu ritmo</h3>
+                        <p>Encontre uma posição confortável e vá com calma.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="passos__numero">03</span>
+                    <div>
+                        <h3>Escolha um pequeno cuidado</h3>
+                        <p>Um copo de água, uma pausa ou uma boa conversa.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Encerramento com uma orientação de apoio e informações do CVV. -->
+        <section class="apoio" id="ajuda" aria-labelledby="titulo-ajuda">
+            <div class="apoio__texto">
+                <h2 id="titulo-ajuda">Pedir ajuda também é uma forma de cuidado.</h2>
+                <p>
+                    Se algo estiver difícil, converse com um adulto de confiança, com a
+                    equipe da escola ou com um profissional de saúde.
+                </p>
+            </div>
+            <div class="apoio__contato">
+                <h3>Precisa conversar? CVV 188</h3>
+                <p>No Brasil, gratuito e disponível 24 horas.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé com a marca e o aviso sobre o conteúdo educativo. -->
+    <footer class="rodape">
+        <div>
+            <span class="marca__nome">entrelaços</span>
+            <p>Saúde mental · Amizade · Hábitos saudáveis</p>
+        </div>
+        <div class="rodape__aviso">
+            <p>Aprender. Compartilhar. Cuidar.</p>
+            <p>Conteúdo educativo. Não substitui acompanhamento profissional.</p>
+        </div>
+    </footer>
+</body>
+</html>
